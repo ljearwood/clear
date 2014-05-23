@@ -19,4 +19,3 @@ function Jasper_theme_support() {
 }
 
 add_action('after_setup_theme', 'Jasper_theme_support');
-?>

@@ -1,10 +1,13 @@
-<?php //ob_start();// This should add the topbar module ?>
+<?php //ob_start();// This should add the topbar module
+    $shortTitleOption = get_option('home_page_post_id');
+    $shortTitle = $shortTitleOption['title'];
+?>
 <!--<div id="fb-root"></div>-->
 <div id="jas-topbar" class="fixed jas-top-bar">
     <nav class="top-bar" data-topbar="">
         <ul class="title-area">
-            <li class="name show-for-medium-up"><h1 class="always-white"><a href="<?php echo get_home_url(); ?>"><?php bloginfo( 'name' ); ?></a></h1></li>
-            <li class="name show-for-small"><h1><a href="<?php echo get_home_url(); ?>">CWMC</a></h1></li>
+            <li class="name show-for-medium-up"><h1 class="always-white"><a href="<?php echo get_home_url(); ?>"><?php echo $shortTitle; //bloginfo( 'name' ); ?></a></h1></li>
+            <li class="name show-for-small"><h1><a href="<?php echo get_home_url(); ?>"><?php echo $shortTitle; ?></a></h1></li>
             <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
         </ul>
         <ul>
